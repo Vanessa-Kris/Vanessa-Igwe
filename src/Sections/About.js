@@ -51,7 +51,7 @@ export default function About() {
           <List>
             <ListItem> Vanessa Christopher Igwe </ListItem>
             <ListItem> She/Her </ListItem>
-            <ListItem> 10th August 2000 </ListItem>
+            <ListItem> 10th August </ListItem>
             <ListItem> Cameroon </ListItem>
             <ListItem> Nigerian </ListItem>
             <ListItem> Food, Open Source, Music. </ListItem>
