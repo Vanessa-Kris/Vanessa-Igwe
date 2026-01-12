@@ -1,9 +1,11 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
+import { useThemeColors } from "../hooks/useThemeColors";
 
-export default function outreachy21() {
+export default function Outreachy21() {
+  const colors = useThemeColors();
   return (
-    <Box sx={{ color: "#fff" }}>
+    <Box sx={{ color: colors.textPrimary }}>
       <Typography variant="h6" sx={{ py: 3 }}>
         Hey There! I'd like to share my experience from my Outreachy internship
         in 2021/2022.

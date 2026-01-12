@@ -1,37 +1,38 @@
 import { Box, Typography, Divider, Grid, List, ListItem } from "@mui/material";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
+import { useThemeColors } from "../hooks/useThemeColors";
 
 export default function About() {
-  const handleDownloadClick = () => {
-    const cvUrl = "/Resume.pdf";
-    const anchor = document.createElement("a");
-    anchor.href = cvUrl;
-    anchor.download = "Vanessa_Resume.pdf";
-    anchor.style.display = "none";
-    document.body.appendChild(anchor);
-    anchor.click();
-    document.body.removeChild(anchor);
-  };
+  const colors = useThemeColors();
+  
+  // const handleDownloadClick = () => {
+  //   const cvUrl = "/Resume.pdf";
+  //   const anchor = document.createElement("a");
+  //   anchor.href = cvUrl;
+  //   anchor.download = "Vanessa_Resume.pdf";
+  //   anchor.style.display = "none";
+  //   document.body.appendChild(anchor);
+  //   anchor.click();
+  //   document.body.removeChild(anchor);
+  // };
   return (
-    <Box sx={{ m: { md: 15, xs: 1 }, pt: 7, color: "#d7d0d7" }}>
+    <Box sx={{ m: { md: 15, xs: 1 }, pt: 7, color: colors.textSecondary }}>
       {/* <Typography variant="h6" sx={{ my: { md: 5, xs: 5 }, fontWeight: 600 }}>
         ABOUT ME
       </Typography> */}
-      <Typography variant="h3" sx={{ my: { md: 3, xs: 3 }, color: "#fff" }}>
-        Biography
+      <Typography variant="h3" sx={{ my: { md: 3, xs: 3 }, color: colors.textPrimary }}>
+        About Me
         <Divider
           flexItem
-          sx={{ bgcolor: "#d7d0d7", width: { md: "20%", xs: "40%" }, my: 2 }}
+          sx={{ bgcolor: colors.divider, width: { md: "20%", xs: "40%" }, my: 2 }}
         />
       </Typography>
 
       <Typography>
-        I'm a software engineer with more than two years of real-world
-        experience. I'm from the lively city of Port Harcourt,
-        Nigeria. What really gets me going is sincerely food but also seeing things work is a boost.
-        I'm always available for exciting opportunities and collabs, so don't be shy.. text me!
+        With over two years of hands-on experience designing and developing
+        real-world applications. Originally from the vibrant city of Port
+        Harcourt and now based in Cameroon. I’m open to collaborations,
+        freelance projects, and opportunities that challenge me.
       </Typography>
 
       <Grid container sx={{ my: 5 }}>
@@ -46,7 +47,7 @@ export default function About() {
             <ListItem> EMAIL </ListItem>
           </List>
         </Grid>
-        <Grid item md={4} xs={8} sx={{ color: "#fff" }}>
+        <Grid item md={4} xs={8} sx={{ color: colors.textPrimary }}>
           <List>
             <ListItem> Vanessa Christopher Igwe </ListItem>
             <ListItem> She/Her </ListItem>
@@ -57,7 +58,7 @@ export default function About() {
             <ListItem> vanessaigwe1@gmail.com </ListItem>
           </List>
         </Grid>
-        <Grid item md={5} xs={12}>
+        {/* <Grid item md={5} xs={12}>
           <Box
             justifyContent="center"
             // display="flex"
@@ -75,7 +76,7 @@ export default function About() {
             <br />
             <Typography variant="body">Download CV</Typography>
           </Box>
-        </Grid>
+        </Grid> */}
       </Grid>
     </Box>
   );

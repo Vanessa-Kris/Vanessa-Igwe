@@ -10,10 +10,12 @@ import {
   DialogActions,
   Button,
 } from "@mui/material";
+import { useThemeColors } from "../hooks/useThemeColors";
 import Outreachy21 from "../Blogs/outreachy21";
 // import Transition from "../Blogs/transition";
 
 export default function Blogs() {
+  const colors = useThemeColors();
   const [openIndex, setOpenIndex] = useState(-1);
 
   const blogPosts = [
@@ -49,15 +51,15 @@ export default function Blogs() {
   };
 
   return (
-    <Box sx={{ m: { md: 15, xs: 1 }, pt: 7, color: "#d7d0d7" }}>
+    <Box sx={{ m: { md: 15, xs: 1 }, pt: 7, color: colors.textSecondary }}>
       <Typography variant="h6" sx={{ my: { md: 5, xs: 5 }, fontWeight: 600 }}>
         Articles & Blogs
       </Typography>
-      <Typography variant="h3" sx={{ my: { md: 3, xs: 3 }, color: "#fff" }}>
+      <Typography variant="h3" sx={{ my: { md: 3, xs: 3 }, color: colors.textPrimary }}>
         latest Blogs
         <Divider
           flexItem
-          sx={{ bgcolor: "#d7d0d7", width: { md: "20%", xs: "40%" }, my: 2 }}
+          sx={{ bgcolor: colors.divider, width: { md: "20%", xs: "40%" }, my: 2 }}
         />
       </Typography>
 
@@ -83,7 +85,7 @@ export default function Blogs() {
             <Typography
               onClick={() => handleOpen(index)}
               variant="h5"
-              sx={{ fontSize: "17px", color: "#fff" }}
+              sx={{ fontSize: "17px", color: colors.textPrimary }}
             >
               {post.title}
             </Typography>
@@ -98,8 +100,8 @@ export default function Blogs() {
           onClose={handleClose}
           PaperProps={{
             sx: {
-              backgroundColor: "#161616",
-              color: "#d7d0d7", // Set the background color of the dialog content
+              backgroundColor: colors.bgPrimary,
+              color: colors.textSecondary, // Set the background color of the dialog content
             },
           }}
           // maxWidth="md"

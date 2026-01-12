@@ -2,9 +2,11 @@ import { Box, Container, Typography, Grid } from "@mui/material";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
+import { useThemeColors } from "../hooks/useThemeColors";
 import Loader from "../Components/Loader";
 
 export default function Name() {
+  const colors = useThemeColors();
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     // Simulate an async operation
@@ -20,14 +22,16 @@ export default function Name() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        color: "#d7d0d7",
+        color: colors.textSecondary,
       }}
     >
-      <Box sx={{ p: 1, border: "1px solid #a55f71", borderRadius: "5px" }}>
+      <Box
+        sx={{ p: 1, border: `1px solid ${colors.accent}`, borderRadius: "5px" }}
+      >
         <Box
           sx={{
             p: 2,
-            border: "1px solid #a55f71",
+            border: `1px solid ${colors.accent}`,
             borderRadius: "5px",
             height: "fixed",
           }}
@@ -42,12 +46,13 @@ export default function Name() {
                 width: "fixed",
                 alignItems: "center",
                 justifyContent: "center",
+                borderRadius: "5px",
                 display: "flex",
                 top: "50%",
                 left: "50%",
               }}
               alt="hacker girl"
-              src="https://img.freepik.com/premium-photo/sute-girl-hacker-with-laptop-avatar-cartoon-style-generated-ai_88188-3329.jpg?size=626&ext=jpg&ga=GA1.2.1563347392.1696364341&semt=ais"
+              src="https://i.pinimg.com/1200x/02/e8/96/02e8963c9a408b751607f942edda9574.jpg"
             />
           )}
           <Typography textAlign="center" variant="h6" sx={{ m: 2 }}>
@@ -78,9 +83,11 @@ export default function Name() {
                   sequence={[
                     "Web Developer",
                     500,
-                    "Software Engineer",
+                    "Software Developer",
                     500,
-                    "Entrepreneur",
+                    "Usability Consultant",
+                    500,
+                    "Product Designer",
                     500,
                   ]}
                   style={{ fontSize: "25px" }}

@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { Card, CardContent } from "@mui/material";
 import LinearProgress from "@mui/material/LinearProgress";
+import { useThemeColors } from "../hooks/useThemeColors";
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -41,13 +42,14 @@ function a11yProps(index) {
 }
 
 export default function Experience() {
+  const colors = useThemeColors();
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
   return (
-    <Box sx={{ m: { md: 15, xs: 1 }, pt: 7, color: "#d7d0d7" }}>
+    <Box sx={{ m: { md: 15, xs: 1 }, pt: 7, color: colors.textSecondary }}>
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
         <Tabs
           component="text"
@@ -56,13 +58,13 @@ export default function Experience() {
           aria-label="basic tabs example"
         >
           <Tab
-            sx={{ color: "#d7d0d7", fontSize: { md: "20px", xs: "15px" } }}
+            sx={{ color: colors.textSecondary, fontSize: { md: "20px", xs: "15px" } }}
             label="Experience"
             {...a11yProps(0)}
           />
           <Tab
             sx={{
-              color: "#d7d0d7",
+              color: colors.textSecondary,
               fontSize: { md: "20px", xs: "15px" },
               mx: { md: 2, xs: 0 },
             }}
@@ -70,7 +72,7 @@ export default function Experience() {
             {...a11yProps(1)}
           />
           {/* <Tab
-            sx={{ color: "#d7d0d7", fontSize: { md: "20px", xs: "15px" } }}
+            sx={{ color: colors.textSecondary, fontSize: { md: "20px", xs: "15px" } }}
             label="Skills"
             {...a11yProps(2)}
           /> */}
@@ -78,15 +80,15 @@ export default function Experience() {
       </Box>
       <CustomTabPanel value={value} index={0}>
         <Card
-          sx={{ p: { md: 2, xs: 1 }, my: { md: 3, xs: 3 }, color: "#d7d0d7" }}
+          sx={{ p: { md: 2, xs: 1 }, my: { md: 3, xs: 3 }, color: colors.textSecondary }}
         >
-          <Typography sx={{ px: { md: 2, xs: 1 }, color: "#fff" }} variant="h5">
+          <Typography sx={{ px: { md: 2, xs: 1 }, color: colors.textPrimary }} variant="h5">
             Outreachy{" "}
-            <span style={{ fontSize: "15px", color: "#d7d0d7" }}>
+            <span style={{ fontSize: "15px", color: colors.textSecondary }}>
               ( Dec 2021 - Mar 2022 )
             </span>
           </Typography>
-          <Typography sx={{ px: 2, pt: 2, color: "#fff" }} variant="h4">
+          <Typography sx={{ px: 2, pt: 2, color: colors.textPrimary }} variant="h4">
             Fedora (Package Manager)
           </Typography>
           <CardContent sx={{ fontSize: "18px" }}>
@@ -127,15 +129,51 @@ export default function Experience() {
         </Card>
         {/*  */}
         <Card
-          sx={{ p: { md: 2, xs: 1 }, my: { md: 3, xs: 3 }, color: "#d7d0d7" }}
+          sx={{ p: { md: 2, xs: 1 }, my: { md: 3, xs: 3 }, color: colors.textSecondary }}
         >
-          <Typography sx={{ px: 2, color: "#fff" }} variant="h5">
+          <Typography sx={{ px: 2, color: colors.textPrimary }} variant="h5">
+            Stunners Galleria{" "}
+            <span style={{ fontSize: "15px", color: colors.textSecondary }}>
+              ( Jan 2023 - Today )
+            </span>
+          </Typography>
+          <Typography sx={{ px: 2, pt: 2, color: colors.textPrimary }} variant="h4">
+            Freelance Front-end Engineer
+          </Typography>
+          <CardContent sx={{ fontSize: "18px" }}>
+            * Worked closely with the backend team to create the{" "}
+            <a
+              target="_blank"
+              rel="noreferrer noopener"
+              style={{ textDecoration: "underline" }}
+              href="https://stunnersgalleria.com"
+            >
+              Stunners Galleria online store{" "}
+            </a>
+            <br />* Worked closely with the backend team to create the{" "}
+            <a
+              target="_blank"
+              rel="noreferrer noopener"
+              style={{ textDecoration: "underline" }}
+              href="https://blog.stunnersgalleria.com"
+            >
+              Stunners Galleria Blog website.{" "}
+            </a>
+            <br />* Created non technical content for Stunners Galleria blog
+          </CardContent>
+        </Card>
+        {/*  */}
+        {/*  */}
+        <Card
+          sx={{ p: { md: 2, xs: 1 }, my: { md: 3, xs: 3 }, color: colors.textSecondary }}
+        >
+          <Typography sx={{ px: 2, color: colors.textPrimary }} variant="h5">
             Afkanerd{" "}
-            <span style={{ fontSize: "15px", color: "#d7d0d7" }}>
+            <span style={{ fontSize: "15px", color: colors.textSecondary }}>
               ( Apr 2022 - Apr 2023 )
             </span>
           </Typography>
-          <Typography sx={{ px: 2, pt: 2, color: "#fff" }} variant="h4">
+          <Typography sx={{ px: 2, pt: 2, color: colors.textPrimary }} variant="h4">
             Jr. Front-end Engineer
           </Typography>
           <CardContent sx={{ fontSize: "18px" }}>
@@ -169,56 +207,20 @@ export default function Experience() {
             </a>
           </CardContent>
         </Card>
-        {/*  */}
         <Card
-          sx={{ p: { md: 2, xs: 1 }, my: { md: 3, xs: 3 }, color: "#d7d0d7" }}
+          sx={{ p: { md: 2, xs: 1 }, my: { md: 3, xs: 3 }, color: colors.textSecondary }}
         >
-          <Typography sx={{ px: 2, color: "#fff" }} variant="h5">
-            Stunners Galleria{" "}
-            <span style={{ fontSize: "15px", color: "#d7d0d7" }}>
-              ( Jan 2023 - Today )
-            </span>
-          </Typography>
-          <Typography sx={{ px: 2, pt: 2, color: "#fff" }} variant="h4">
-            Freelance Front-end Engineer
-          </Typography>
-          <CardContent sx={{ fontSize: "18px" }}>
-            * Worked closely with the backend team to create the{" "}
-            <a
-              target="_blank"
-              rel="noreferrer noopener"
-              style={{ textDecoration: "underline" }}
-              href="https://stunnersgalleria.com"
-            >
-              Stunners Galleria online store{" "}
-            </a>
-            <br />* Worked closely with the backend team to create the{" "}
-            <a
-              target="_blank"
-              rel="noreferrer noopener"
-              style={{ textDecoration: "underline" }}
-              href="https://blog.stunnersgalleria.com"
-            >
-              Stunners Galleria Blog website.{" "}
-            </a>
-            <br />* Created non technical content for Stunners Galleria blog
-          </CardContent>
-        </Card>
-        {/*  */}
-        <Card
-          sx={{ p: { md: 2, xs: 1 }, my: { md: 3, xs: 3 }, color: "#d7d0d7" }}
-        >
-          <Typography sx={{ px: 2, color: "#fff" }} variant="h5">
+          <Typography sx={{ px: 2, color: colors.textPrimary }} variant="h5">
             Afkanerd
-            <span style={{ fontSize: "15px", color: "#d7d0d7" }}>
-              ( March 2024 - Today)
+            <span style={{ fontSize: "15px", color: colors.textSecondary }}>
+              ( March 2024 - March 2025 )
             </span>
           </Typography>
-          <Typography sx={{ px: 2, pt: 2, color: "#fff" }} variant="h4">
+          <Typography sx={{ px: 2, pt: 2, color: colors.textPrimary }} variant="h4">
             Desktop App Developer
           </Typography>
           <CardContent sx={{ fontSize: "18px" }}>
-            * Worked with an awesome team to build the RelaySMS {" "}
+            * Worked with an awesome team to build the RelaySMS{" "}
             <a
               target="_blank"
               rel="noreferrer noopener"
@@ -227,28 +229,62 @@ export default function Experience() {
             >
               Desktop App
             </a>
-            <br/>
-            * Developed an API endpoint to provide access to {" "}
+            <br />* Developed an API endpoint to provide access to{" "}
             <a
               target="_blank"
               rel="noreferrer noopener"
               style={{ textDecoration: "underline" }}
               href="https://github.com/smswithoutborders/RelaySMS-Publisher"
             >
-             publication metrics.
+              publication metrics.
             </a>
+          </CardContent>
+        </Card>
+        {/*  */}
+        <Card
+          sx={{ p: { md: 2, xs: 1 }, my: { md: 3, xs: 3 }, color: colors.textSecondary }}
+        >
+          <Typography sx={{ px: 2, color: colors.textPrimary }} variant="h5">
+            Afkanerd
+            <span style={{ fontSize: "15px", color: colors.textSecondary }}>
+              ( March 2025 - Today )
+            </span>
+          </Typography>
+          <Typography sx={{ px: 2, pt: 2, color: colors.textPrimary }} variant="h4">
+            Front-end Engineer
+          </Typography>
+          <CardContent sx={{ fontSize: "18px" }}>
+            * Worked with an awesome team to re-build the RelaySMS{" "}
+            <a
+              target="_blank"
+              rel="noreferrer noopener"
+              style={{ textDecoration: "underline" }}
+              href="https://github.com/smswithoutborders/relaysms-website/"
+            >
+              Website
+            </a>
+            <br />* Redesigned landing/ product pages across the organization{" "}
+            <br />* Designed and implemented new user interfaces using React{" "}
+            <br /> * Created branding assets and marketing materials for
+            RelaySMS
+            <br /> * Collaborated with cross-functional teams to ensure brand
+            consistency
+            <br /> * Conducted user research and usability testing to inform
+            design decisions
+            <br /> * Worked on NostaBridge product page and dashboard, also created branding assets
+            <br /> * Worked on QueueDroid page and dashboard, also created branding assets
           </CardContent>
         </Card>
       </CustomTabPanel>
       {/* <CustomTabPanel value={value} index={1}>
-        <Card sx={{ p: 2, my: 2, bgcolor: "#232323", color: "#d7d0d7" }}>
-          <Typography sx={{ px: 2, color: "#fff" }} variant="h5">
+        <Card sx={{ p: 2, my: 2, bgcolor: colors.bgSecondary, color: colors.textSecondary }}>
+          <Typography sx={{ px: 2, color: colors.textPrimary }} variant="h5">
             Faith International College{" "}
-            <span style={{ fontSize: "15px", color: "#d7d0d7" }}>
+            <span style={{ fontSize: "15px", color: colors.textSecondary }}>
               ( 2010 - 2016 )
             </span>
           </Typography>
-          <Typography sx={{ px: 2, pt: 2, color: "#fff" }} variant="h4">
+          <Typography sx={{ px: 2, pt: 2, color: colors.textPrimary }} variant="h4">
             High Scool
           </Typography>
           <CardContent sx={{ fontSize: "18px" }}>
@@ -264,14 +300,14 @@ export default function Experience() {
         </Card>
 
         
-        <Card sx={{ p: 2, my: 2, bgcolor: "#232323", color: "#d7d0d7" }}>
-          <Typography sx={{ px: 2, color: "#fff" }} variant="h5">
+        <Card sx={{ p: 2, my: 2, bgcolor: colors.bgSecondary, color: colors.textSecondary }}>
+          <Typography sx={{ px: 2, color: colors.textPrimary }} variant="h5">
             RIVERS STATE UNIVERSITY OF SCIENCE AND TECHNOLOGY{" "}
-            <span style={{ fontSize: "15px", color: "#d7d0d7" }}>
+            <span style={{ fontSize: "15px", color: colors.textSecondary }}>
               ( 2016 - 2019 )
             </span>
           </Typography>
-          <Typography sx={{ px: 2, pt: 2, color: "#fff" }} variant="h4">
+          <Typography sx={{ px: 2, pt: 2, color: colors.textPrimary }} variant="h4">
             Biology
           </Typography>
           <CardContent sx={{ fontSize: "18px" }}>

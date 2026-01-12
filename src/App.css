@@ -18,8 +18,17 @@
 
 
 body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
     background-color: #161616 !important;   
     color: #d7d0d7 !important;
+}
+
+body.light-mode {
+    background-color: #ffffff !important;   
+    color: #1a1a1a !important;
 }
 
 .divider {
@@ -46,7 +55,7 @@ p{
   .list {
     display: flex;
     list-style: none;
-    height: 390px;
+    /* height: 390px; */
     overflow-x: scroll;
     padding: 20px 0;
     flex: 0 0 600px;
@@ -56,7 +65,7 @@ p{
   .list2 {
     display: flex;
     list-style: none;
-    height: 250px;
+    /* height: 250px; */
     overflow-x: scroll;
     padding: 20px 0;
     flex: 0 0 600px;

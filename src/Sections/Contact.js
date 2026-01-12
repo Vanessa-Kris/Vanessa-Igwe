@@ -15,18 +15,21 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import React from "react";
+import { useThemeColors } from "../hooks/useThemeColors";
 
 export default function Contact() {
+  const colors = useThemeColors();
+  
   return (
-    <Box sx={{ m: { md: 15, xs: 1 }, pt: 7, color: "#d7d0d7" }}>
+    <Box sx={{ m: { md: 15, xs: 1 }, pt: 7, color: colors.textSecondary }}>
       <Typography variant="h6" sx={{ my: { md: 5, xs: 5 }, fontWeight: 600 }}>
         CONTACT
       </Typography>
-      <Typography variant="h3" sx={{ my: { md: 3, xs: 3 }, color: "#fff" }}>
+      <Typography variant="h3" sx={{ my: { md: 3, xs: 3 }, color: colors.textPrimary }}>
         Get In Touch
         <Divider
           flexItem
-          sx={{ bgcolor: "#d7d0d7", width: { md: "20%", xs: "40%" }, my: 2 }}
+          sx={{ bgcolor: colors.divider, width: { md: "20%", xs: "40%" }, my: 2 }}
         />
       </Typography>
 
@@ -48,7 +51,7 @@ export default function Contact() {
             fullWidth
             name="name"
             id="outlined-basic"
-            sx={{ border: "1px solid #a55f71", borderRadius: "5px" }}
+            sx={{ border: "1px solid #673147", borderRadius: "5px" }}
           />
         </Grid>
         <Grid item md={6} xs={12} sx={{ py: 2 }}>
@@ -58,17 +61,17 @@ export default function Contact() {
             name="email"
             id="outlined-basic"
             variant="outlined"
-            sx={{ border: "1px solid #a55f71", borderRadius: "5px" }}
+            sx={{ border: "1px solid #673147", borderRadius: "5px" }}
           />
         </Grid>
         <Grid item md={12} xs={12} sx={{ py: 2 }}>
-          Number <br />
+          Phone Number <br />
           <TextField
             fullWidth
             name="number"
             id="outlined-basic"
             variant="outlined"
-            sx={{ border: "1px solid #a55f71", borderRadius: "5px" }}
+            sx={{ border: "1px solid #673147", borderRadius: "5px" }}
           />
         </Grid>
         <Grid item md={12} xs={12} sx={{ py: 2 }}>
@@ -82,7 +85,7 @@ export default function Contact() {
             variant="outlined"
             className="input"
             sx={{
-              border: "1px solid #a55f71",
+              border: "1px solid #673147",
               borderRadius: "5px",
             }}
           />
@@ -106,9 +109,9 @@ export default function Contact() {
 
         <Typography
           variant={"h4"}
-          sx={{ fontSize: { md: "30px", xs: "25px" }, color: "#fff" }}
+          sx={{ fontSize: { md: "30px", xs: "25px" }, color: colors.textPrimary }}
         >
-          Sonac Street Bamenda, Cameroon
+          Cameroon
         </Typography>
 
         <Typography variant="h5" sx={{ fontSize: { md: "17px" }, mt: 5 }}>
@@ -117,7 +120,7 @@ export default function Contact() {
 
         <Typography
           variant={"h4"}
-          sx={{ mb: 5, fontSize: { md: "30px", xs: "25px" }, color: "#fff" }}
+          sx={{ mb: 5, fontSize: { md: "30px", xs: "25px" }, color: colors.textPrimary }}
         >
           Vanessaigwe1@gmail.com
         </Typography>
@@ -130,7 +133,7 @@ export default function Contact() {
           <FontAwesomeIcon
             style={{ fontSize: "30px", marginRight: 30 }}
             icon={faGithub}
-            color="#a55f71"
+            color="#673147"
           />
         </Box>
         <Box
@@ -141,7 +144,7 @@ export default function Contact() {
           <FontAwesomeIcon
             style={{ fontSize: "30px", marginRight: 30 }}
             icon={faLinkedin}
-            color="#a55f71"
+            color="#673147"
           />
         </Box>
 
@@ -153,7 +156,7 @@ export default function Contact() {
           <FontAwesomeIcon
             style={{ fontSize: "30px", marginRight: 30 }}
             icon={faXTwitter}
-            color="#a55f71"
+            color="#673147"
           />
         </Box>
 
@@ -165,7 +168,7 @@ export default function Contact() {
           <FontAwesomeIcon
             style={{ fontSize: "30px", marginRight: 30 }}
             icon={faFacebook}
-            color="#a55f71"
+            color="#673147"
           />
         </Box>
 
@@ -177,7 +180,7 @@ export default function Contact() {
           <FontAwesomeIcon
             style={{ fontSize: "30px", marginRight: 30 }}
             icon={faInstagram}
-            color="#a55f71"
+            color="#673147"
           />
         </Box>
       </Box>

@@ -12,7 +12,7 @@ const MouseMotionCircle = ({ x, y }) => {
         width: "20px",
         height: "20px",
         borderRadius: "50%",
-        border: "12px solid #a55f71",
+        border: "12px solid #673147",
         display: { md: "block", xs: "none" },
       }}
     ></motion.div>

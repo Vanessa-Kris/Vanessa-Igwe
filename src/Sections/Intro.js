@@ -1,23 +1,32 @@
 import { Box, Typography, Divider } from "@mui/material";
 import React from "react";
+import { useThemeColors } from "../hooks/useThemeColors";
 
 export default function Intro() {
+  const colors = useThemeColors();
+  
   return (
-    <Box sx={{ m: { md: 15, xs: 1 }, color: "#d7d0d7", pt: 8 }}>
-      <Typography variant="h3" sx={{ my: { md: 3, xs: 3 }, color: "#fff" }}>
-        Software Engineer
+    <Box sx={{ m: { md: 15, xs: 1 }, color: colors.textSecondary, pt: 8 }}>
+      <Typography variant="h3" sx={{ my: { md: 3, xs: 3 }, color: colors.textPrimary }}>
+        Software Developer & Designer
         <Divider
           flexItem
-          sx={{ bgcolor: "#d7d0d7", width: { md: "20%", xs: "40%" }, my: 2 }}
+          sx={{ bgcolor: colors.divider, width: { md: "20%", xs: "40%" }, my: 2 }}
         />
       </Typography>
 
       <Typography>
-        I'm very happy you found me! I love creating/designing
-        visually stunning websites, I love music, food, art and a bunch of other fun stuff. You'll
-        absolutely love connecting with me.{" "}
+        A software developer and creative who builds visually stunning and
+        functional digital experiences. I’m passionate about clean UI, elegant
+        product design, and seamless user experiences. Outside tech, I’m
+        building a fashion brand, obsessed with loc culture, and deeply inspired
+        by music, food, and art.
       </Typography>
-      <Box sx={{ mt: 7 }} component="img" src="/name.png" />
+      <Box
+        sx={{ mt: 7, width: { md: "60%", xs: "80%" } }}
+        component="img"
+        src="/Vanessa Christopher.svg"
+      />
     </Box>
   );
 }

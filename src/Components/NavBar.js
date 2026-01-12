@@ -1,20 +1,15 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBarsStaggered } from "@fortawesome/free-solid-svg-icons";
-import {
-  faGithub,
-  faTwitter,
-  faFacebook,
-  faInstagram,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
 import IconButton from "@mui/material/IconButton";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
 import { Box } from "@mui/material";
+import { MenuOutlined } from "@ant-design/icons";
+import { useThemeColors } from "../hooks/useThemeColors";
+import ThemeToggle from "./ThemeToggle";
 // import { Link } from "react-scroll";
 
-export default function NavBar() {
+export default function NavBar({ mode, toggleTheme }) {
+  const colors = useThemeColors();
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleMenu = (event) => {
@@ -31,10 +26,13 @@ export default function NavBar() {
         sx={{
           justifyContent: "flex-end",
           display: "flex",
-          pr: { md: 0, xs: 2 },
-          pt: { md: 4, xs: 2 },
+          alignItems: "center",
+          pr: { md: 2, xs: 2 },
+          pt: { md: 5, xs: 3 },
+          gap: 1,
         }}
       >
+        <ThemeToggle mode={mode} onToggle={toggleTheme} />
         <IconButton
           size="large"
           aria-label="account of current user"
@@ -42,14 +40,22 @@ export default function NavBar() {
           aria-haspopup="true"
           onClick={handleMenu}
           color="inherit"
+          sx={{
+            padding: { md: 2, xs: 1.5 },
+          }}
         >
-          <FontAwesomeIcon icon={faBarsStaggered} color="#d7d0d7" />
+          <MenuOutlined style={{ fontSize: "28px", color: "#673147" }} />
         </IconButton>
         <Menu
           PaperProps={{
             sx: {
-              backgroundColor: "#171717",
-              color: "#d7d0d7",
+              // backgroundColor: "#000000ff",
+              color: colors.textSecondary,
+              minWidth: "220px",
+              borderRadius: "12px",
+              border: "1px solid #292929ff",
+              boxShadow: "0 8px 32px rgba(0, 0, 0, 0.4)",
+              mt: 1,
             },
           }}
           id="menu-appbar"
@@ -66,83 +72,84 @@ export default function NavBar() {
           open={Boolean(anchorEl)}
           onClose={handleClose}
         >
-          <MenuItem component="a" href="#intro" onClick={handleClose}>
+          <MenuItem
+            component="a"
+            href="#intro"
+            onClick={handleClose}
+            sx={{
+              py: 1.5,
+              px: 3,
+              fontSize: "16px",
+              fontWeight: 500,
+              transition: "all 0.2s ease",
+              "&:hover": {
+                backgroundColor: "#673147",
+                color: colors.textPrimary,
+                paddingLeft: "28px",
+              },
+            }}
+          >
             Home
           </MenuItem>
-          <MenuItem component="a" href="#about" onClick={handleClose}>
-            About
-          </MenuItem>
-          <MenuItem component="a" href="#experience" onClick={handleClose}>
-            Experience
-          </MenuItem>
-          <MenuItem component="a" href="#portfolio" onClick={handleClose}>
+
+          <MenuItem
+            component="a"
+            href="/projects"
+            onClick={handleClose}
+            sx={{
+              py: 1.5,
+              px: 3,
+              fontSize: "16px",
+              fontWeight: 500,
+              transition: "all 0.2s ease",
+              "&:hover": {
+                backgroundColor: "#673147",
+                color: colors.textPrimary,
+                paddingLeft: "28px",
+              },
+            }}
+          >
             Projects
           </MenuItem>
-          <MenuItem component="a" href="#reviews" onClick={handleClose}>
-            Reviews
-          </MenuItem>
-          <MenuItem component="a" href="#blogs" onClick={handleClose}>
+
+          <MenuItem
+            component="a"
+            href="#blogs"
+            onClick={handleClose}
+            sx={{
+              py: 1.5,
+              px: 3,
+              fontSize: "16px",
+              fontWeight: 500,
+              transition: "all 0.2s ease",
+              "&:hover": {
+                backgroundColor: "#673147",
+                color: colors.textPrimary,
+                paddingLeft: "28px",
+              },
+            }}
+          >
             Blogs
           </MenuItem>
-          <MenuItem component="a" href="#contact" onClick={handleClose}>
+          <MenuItem
+            component="a"
+            href="#contact"
+            onClick={handleClose}
+            sx={{
+              py: 1.5,
+              px: 3,
+              fontSize: "16px",
+              fontWeight: 500,
+              transition: "all 0.2s ease",
+              "&:hover": {
+                backgroundColor: "#673147",
+                color: colors.textPrimary,
+                paddingLeft: "28px",
+              },
+            }}
+          >
             Contact
           </MenuItem>
-          <Box display="flex">
-            <MenuItem component="a" href="https://github.com/Vanessa-Kris">
-              <FontAwesomeIcon
-                style={{ fontSize: "30px", marginRight: 30 }}
-                icon={faGithub}
-                color="#a55f71"
-              />
-            </MenuItem>
-            <MenuItem
-              component="a"
-              href="https://www.linkedin.com/in/vanessachristopherigwe"
-              target="_blank"
-            >
-              <FontAwesomeIcon
-                style={{ fontSize: "30px", marginRight: 30 }}
-                icon={faLinkedin}
-                color="#a55f71"
-              />
-            </MenuItem>
-
-            <MenuItem
-              component="a"
-              href="https://twitter.com/Mini_on_Nessa"
-              target="_blank"
-            >
-              <FontAwesomeIcon
-                style={{ fontSize: "30px", marginRight: 30 }}
-                icon={faTwitter}
-                color="#a55f71"
-              />
-            </MenuItem>
-
-            <MenuItem
-              component="a"
-              href="https://facebook.com/vanesssachrsitopherigwe/"
-              target="_blank"
-            >
-              <FontAwesomeIcon
-                style={{ fontSize: "30px", marginRight: 30 }}
-                icon={faFacebook}
-                color="#a55f71"
-              />
-            </MenuItem>
-
-            <MenuItem
-              component="a"
-              href="https://www.instagram.com/vanessachristopherigwe/"
-              target="_blank"
-            >
-              <FontAwesomeIcon
-                style={{ fontSize: "30px", marginRight: 30 }}
-                icon={faInstagram}
-                color="#a55f71"
-              />
-            </MenuItem>
-          </Box>
         </Menu>
       </Box>
     </nav>

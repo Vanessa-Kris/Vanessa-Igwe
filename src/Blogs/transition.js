@@ -1,9 +1,11 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
+import { useThemeColors } from "../hooks/useThemeColors";
 
 export default function Transition() {
+  const colors = useThemeColors();
   return (
-    <Box sx={{ color: "#fff" }}>
+    <Box sx={{ color: colors.textPrimary }}>
       <Typography variant="h6" sx={{ py: 3 }}>
         In December 2019, I had just relocated to Cameroon, leaving my school
         and everything behind in an attempt to start anew. At that time, I had

@@ -2,21 +2,23 @@ import { Box, Typography, Divider } from "@mui/material";
 import React from "react";
 import { useRef } from "react";
 import { motion, useScroll } from "framer-motion";
+import { useThemeColors } from "../hooks/useThemeColors";
 
 export default function Reviews() {
+  const colors = useThemeColors();
   const ref = useRef(null);
   const { scrollXProgress } = useScroll({ container: ref });
 
   return (
-    <Box sx={{ m: { md: 15, xs: 1 }, pt: 7, color: "#d7d0d7" }}>
+    <Box sx={{ m: { md: 15, xs: 1 }, pt: 7, color: colors.textSecondary }}>
       {/* <Typography variant="h6" sx={{ my: { md: 5, xs: 5 }, fontWeight: 600 }}>
         What People Are Saying
       </Typography> */}
-      <Typography variant="h3" sx={{ my: { md: 3, xs: 3 }, color: "#fff" }}>
+      <Typography variant="h3" sx={{ my: { md: 3, xs: 3 }, color: colors.textPrimary }}>
         Reviews
         <Divider
           flexItem
-          sx={{ bgcolor: "#d7d0d7", width: { md: "20%", xs: "40%" }, my: 2 }}
+          sx={{ bgcolor: colors.divider, width: { md: "20%", xs: "40%" }, my: 2 }}
         />
       </Typography>
 
@@ -38,7 +40,7 @@ export default function Reviews() {
             "Vanessa is an outstanding teammate – she's a quick learner,
             incredibly creative, and an absolute joy to have around."
           </Typography>
-          <Typography sx={{ color: "#fff", pt: 4, pb: 1 }}>
+          <Typography sx={{ color: colors.textPrimary, pt: 4, pb: 1 }}>
             Promise Fru
           </Typography>
           <Typography variant="h5" sx={{ fontSize: "17px" }}>
@@ -50,7 +52,7 @@ export default function Reviews() {
             "I couldn't have found a better person to create my blogging
             website; it looks super cool and matches my vision perfectly."
           </Typography>
-          <Typography sx={{ color: "#fff", pt: 4, pb: 1 }}>Sheba C.</Typography>
+          <Typography sx={{ color: colors.textPrimary, pt: 4, pb: 1 }}>Sheba C.</Typography>
           <Typography variant="h5" sx={{ fontSize: "17px" }}>
             Client
           </Typography>
