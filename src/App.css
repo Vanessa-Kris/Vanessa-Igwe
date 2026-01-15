@@ -100,6 +100,7 @@ p{
     top: 50%;
     right: 0;    
     transform: translate(-15%, -50%);
+    z-index: 1;
   }
   
   .mouse-motion-circle {

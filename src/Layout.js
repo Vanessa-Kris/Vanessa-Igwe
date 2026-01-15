@@ -44,7 +44,7 @@ export default function Layout(props) {
             zIndex: 1000,
           }}
         >
-          {/* <ThemeToggle mode={props.mode} onToggle={props.toggleTheme} /> */}
+          <ThemeToggle mode={props.mode} onToggle={props.toggleTheme} />
         </Box>
         <Box sx={{ display: { md: "block", xs: "none" } }}>
           {props.children}
@@ -88,6 +88,7 @@ export default function Layout(props) {
               position: "fixed",
               right: 0,
               pr: 4,
+              zIndex: 1000,
             }}
           >
             <NavBar mode={props.mode} toggleTheme={props.toggleTheme} />

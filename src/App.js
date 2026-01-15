@@ -24,8 +24,8 @@ import RelaySMSDesktop from "./Projects/RelaySMS-Desktop";
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [mode, setMode] = useState(() => {
-    // Get theme from localStorage or default to 'dark'
-    return localStorage.getItem('themeMode') || 'dark';
+    // Get theme from localStorage or default to 'light'
+    return localStorage.getItem('themeMode') || 'light';
   });
 
   const theme = useMemo(

@@ -8,6 +8,7 @@ export default function ThemeToggle({ mode, onToggle }) {
       <IconButton
         onClick={onToggle}
         sx={{
+          zIndex: 9999,
           padding: { md: 2, xs: 1.5 },
           color: "#673147",
           transition: "all 0.3s ease",
