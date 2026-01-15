@@ -17,7 +17,8 @@ export default function Name() {
   return (
     <Container
       sx={{
-        my: 5,
+        mb: 5,
+        mt: 12,
         flexDirection: "column",
         display: "flex",
         alignItems: "center",
@@ -42,8 +43,8 @@ export default function Name() {
             <Box
               component="img"
               sx={{
-                height: "fixed",
-                width: "fixed",
+                // height: "fixed",
+                // width: "fixed",
                 alignItems: "center",
                 justifyContent: "center",
                 borderRadius: "5px",
@@ -52,11 +53,11 @@ export default function Name() {
                 left: "50%",
               }}
               alt="hacker girl"
-              src="https://i.pinimg.com/1200x/02/e8/96/02e8963c9a408b751607f942edda9574.jpg"
+              src="zz.jpeg"
             />
           )}
           <Typography textAlign="center" variant="h6" sx={{ m: 2 }}>
-            MEET ME!
+            MEET ME!  
           </Typography>
           <Grid
             container

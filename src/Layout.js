@@ -74,7 +74,7 @@ export default function Layout(props) {
             <Box id="portfolio">{props.portfolio}</Box>
             <Box id="experience">{props.experience}</Box>
             {/* <Box id="reviews">{props.reviews}</Box> */}
-            <Box id="blogs">{props.blogs}</Box>
+            {/* <Box id="blogs">{props.blogs}</Box> */}
             <Box id="contact">{props.contact}</Box>
             <Box id="footer">{props.footer}</Box>
           </Grid>

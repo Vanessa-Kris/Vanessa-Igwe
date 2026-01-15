@@ -58,7 +58,7 @@ function Projects() {
             Dashboard
           </Typography>
           <Typography sx={{ color: colors.textPrimary, fontSize: "25px" }}>
-            RelaySMS telemetry Dashboardi
+            RelaySMS telemetry Dashboard
           </Typography>
         </Grid>
 

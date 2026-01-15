@@ -16,7 +16,7 @@ export default function Intro() {
       </Typography>
 
       <Typography>
-        A software developer and creative who builds visually stunning and
+        Creative software developer and designer building visually stunning and
         functional digital experiences. I’m passionate about clean UI, elegant
         product design, and seamless user experiences. Outside tech, I’m
         building a fashion brand, obsessed with loc culture, and deeply inspired
