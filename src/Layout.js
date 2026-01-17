@@ -106,8 +106,8 @@ export default function Layout(props) {
         <Box id="about">{props.about}</Box>
         <Box id="experience">{props.experience}</Box>
         <Box id="portfolio">{props.portfolio}</Box>
-        <Box id="reviews">{props.reviews}</Box>
-        <Box id="blogs">{props.blogs}</Box>
+        {/* <Box id="reviews">{props.reviews}</Box>
+        <Box id="blogs">{props.blogs}</Box> */}
         <Box id="contact">{props.contact}</Box>
         {props.footer}
       </Box>

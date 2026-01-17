@@ -19,17 +19,31 @@ import { useThemeColors } from "../hooks/useThemeColors";
 
 export default function Contact() {
   const colors = useThemeColors();
-  
+
   return (
-    <Box sx={{ m: { md: 15, xs: 1 }, pt: 7, color: colors.textSecondary }}>
+    <Box
+      sx={{
+        m: { md: 15, xs: 1 },
+        pt: 7,
+        color: colors.textSecondary,
+        px: { xs: 1.5 },
+      }}
+    >
       <Typography variant="h6" sx={{ my: { md: 5, xs: 5 }, fontWeight: 600 }}>
         CONTACT
       </Typography>
-      <Typography variant="h3" sx={{ my: { md: 3, xs: 3 }, color: colors.textPrimary }}>
+      <Typography
+        variant="h3"
+        sx={{ my: { md: 3, xs: 3 }, color: colors.textPrimary }}
+      >
         Get In Touch
         <Divider
           flexItem
-          sx={{ bgcolor: colors.divider, width: { md: "20%", xs: "40%" }, my: 2 }}
+          sx={{
+            bgcolor: colors.divider,
+            width: { md: "20%", xs: "40%" },
+            my: 2,
+          }}
         />
       </Typography>
 
@@ -109,7 +123,10 @@ export default function Contact() {
 
         <Typography
           variant={"h4"}
-          sx={{ fontSize: { md: "30px", xs: "25px" }, color: colors.textPrimary }}
+          sx={{
+            fontSize: { md: "30px", xs: "25px" },
+            color: colors.textPrimary,
+          }}
         >
           Cameroon
         </Typography>
@@ -120,7 +137,11 @@ export default function Contact() {
 
         <Typography
           variant={"h4"}
-          sx={{ mb: 5, fontSize: { md: "30px", xs: "25px" }, color: colors.textPrimary }}
+          sx={{
+            mb: 5,
+            fontSize: { md: "30px", xs: "25px" },
+            color: colors.textPrimary,
+          }}
         >
           Vanessaigwe1@gmail.com
         </Typography>

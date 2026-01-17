@@ -112,7 +112,7 @@ export default function NavBar({ mode, toggleTheme }) {
             Projects
           </MenuItem>
 
-          <MenuItem
+          {/* <MenuItem
             component="a"
             href="#blogs"
             onClick={handleClose}
@@ -130,7 +130,7 @@ export default function NavBar({ mode, toggleTheme }) {
             }}
           >
             Blogs
-          </MenuItem>
+          </MenuItem> */}
           <MenuItem
             component="a"
             href="#contact"

@@ -16,7 +16,7 @@ export default function About() {
   //   document.body.removeChild(anchor);
   // };
   return (
-    <Box sx={{ m: { md: 15, xs: 1 }, pt: 7, color: colors.textSecondary }}>
+    <Box sx={{ m: { md: 15, xs: 1 }, pt: 7, color: colors.textSecondary, px: {xs: 1.5} }}>
       {/* <Typography variant="h6" sx={{ my: { md: 5, xs: 5 }, fontWeight: 600 }}>
         ABOUT ME
       </Typography> */}

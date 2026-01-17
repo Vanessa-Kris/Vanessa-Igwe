@@ -10,7 +10,14 @@ export default function Portfolio() {
   const { scrollXProgress } = useScroll({ container: ref });
 
   return (
-    <Box sx={{ m: { md: 15, xs: 1 }, pt: 7, color: colors.textSecondary }}>
+    <Box
+      sx={{
+        m: { md: 15, xs: 1 },
+        pt: 7,
+        color: colors.textSecondary,
+        px: { xs: 1.5 },
+      }}
+    >
       <Typography variant="h6" sx={{ my: { md: 2, xs: 2 }, fontWeight: 600 }}>
         PORTFOLIO
       </Typography>
@@ -30,7 +37,11 @@ export default function Portfolio() {
           </Typography>
           <Divider
             flexItem
-            sx={{ bgcolor: colors.divider, width: { md: "20%", xs: "40%" }, my: 2 }}
+            sx={{
+              bgcolor: colors.divider,
+              width: { md: "20%", xs: "40%" },
+              my: 2,
+            }}
           />
         </Box>
 
