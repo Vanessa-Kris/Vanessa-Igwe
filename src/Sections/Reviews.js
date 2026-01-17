@@ -10,15 +10,29 @@ export default function Reviews() {
   const { scrollXProgress } = useScroll({ container: ref });
 
   return (
-    <Box sx={{ m: { md: 15, xs: 1 }, pt: 7, color: colors.textSecondary }}>
+    <Box
+      sx={{
+        m: { md: 15, xs: 1 },
+        pt: 7,
+        color: colors.textSecondary,
+        px: { xs: 1.5 },
+      }}
+    >
       {/* <Typography variant="h6" sx={{ my: { md: 5, xs: 5 }, fontWeight: 600 }}>
         What People Are Saying
       </Typography> */}
-      <Typography variant="h3" sx={{ my: { md: 3, xs: 3 }, color: colors.textPrimary }}>
+      <Typography
+        variant="h3"
+        sx={{ my: { md: 3, xs: 3 }, color: colors.textPrimary }}
+      >
         Reviews
         <Divider
           flexItem
-          sx={{ bgcolor: colors.divider, width: { md: "20%", xs: "40%" }, my: 2 }}
+          sx={{
+            bgcolor: colors.divider,
+            width: { md: "20%", xs: "40%" },
+            my: 2,
+          }}
         />
       </Typography>
 
@@ -52,7 +66,9 @@ export default function Reviews() {
             "I couldn't have found a better person to create my blogging
             website; it looks super cool and matches my vision perfectly."
           </Typography>
-          <Typography sx={{ color: colors.textPrimary, pt: 4, pb: 1 }}>Sheba C.</Typography>
+          <Typography sx={{ color: colors.textPrimary, pt: 4, pb: 1 }}>
+            Sheba C.
+          </Typography>
           <Typography variant="h5" sx={{ fontSize: "17px" }}>
             Client
           </Typography>

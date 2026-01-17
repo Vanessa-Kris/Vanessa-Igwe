@@ -51,15 +51,29 @@ export default function Blogs() {
   };
 
   return (
-    <Box sx={{ m: { md: 15, xs: 1 }, pt: 7, color: colors.textSecondary }}>
+    <Box
+      sx={{
+        m: { md: 15, xs: 1 },
+        pt: 7,
+        color: colors.textSecondary,
+        px: { xs: 1.5 },
+      }}
+    >
       <Typography variant="h6" sx={{ my: { md: 5, xs: 5 }, fontWeight: 600 }}>
         Articles & Blogs
       </Typography>
-      <Typography variant="h3" sx={{ my: { md: 3, xs: 3 }, color: colors.textPrimary }}>
+      <Typography
+        variant="h3"
+        sx={{ my: { md: 3, xs: 3 }, color: colors.textPrimary }}
+      >
         latest Blogs
         <Divider
           flexItem
-          sx={{ bgcolor: colors.divider, width: { md: "20%", xs: "40%" }, my: 2 }}
+          sx={{
+            bgcolor: colors.divider,
+            width: { md: "20%", xs: "40%" },
+            my: 2,
+          }}
         />
       </Typography>
 

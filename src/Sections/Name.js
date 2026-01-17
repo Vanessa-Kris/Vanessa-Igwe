@@ -43,8 +43,8 @@ export default function Name() {
             <Box
               component="img"
               sx={{
-                // height: "fixed",
-                // width: "fixed",
+                height: "fixed",
+                width: "fixed",
                 alignItems: "center",
                 justifyContent: "center",
                 borderRadius: "5px",
@@ -52,7 +52,7 @@ export default function Name() {
                 top: "50%",
                 left: "50%",
               }}
-              alt="hacker girl"
+              alt="A picture of Vanessa"
               src="zz.jpeg"
             />
           )}
@@ -67,7 +67,7 @@ export default function Name() {
             sx={{ my: 2 }}
           >
             <Grid item md={1} xs={1}>
-              <Typography sx={{ color: "green" }} variant="h4">
+              <Typography sx={{ color: "#3a6413ff" }} variant="h4">
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -98,7 +98,7 @@ export default function Name() {
               </Box>
             </Grid>
             <Grid item md={1} xs={1}>
-              <Typography sx={{ color: "green" }} variant="h4">
+              <Typography sx={{ color: "#3a6413ff" }} variant="h4">
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
