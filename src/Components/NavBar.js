@@ -27,7 +27,7 @@ export default function NavBar({ mode, toggleTheme }) {
           justifyContent: "flex-end",
           display: "flex",
           alignItems: "center",
-          pr: { md: 2, xs: 2 },
+          pr: { md: 1, xs: 2 },
           pt: { md: 5, xs: 3 },
           gap: 1,
         }}
@@ -44,18 +44,22 @@ export default function NavBar({ mode, toggleTheme }) {
             padding: { md: 2, xs: 1.5 },
           }}
         >
-          <MenuOutlined style={{ fontSize: "28px", color: "#673147" }} />
+          <MenuOutlined style={{ fontSize: "25px", color: "#673147" }} />
         </IconButton>
         <Menu
+        elevation={0}
           PaperProps={{
             sx: {
               // backgroundColor: "#000000ff",
+              // color: colors.textSecondary,
+              bgcolor: colors.background.paper,
               color: colors.textSecondary,
               minWidth: "220px",
               borderRadius: "12px",
-              border: "1px solid #292929ff",
-              boxShadow: "0 8px 32px rgba(0, 0, 0, 0.4)",
+              // border: "1px solid #292929ff",
+              // boxShadow: "0 8px 32px rgba(0, 0, 0, 0.4)",
               mt: 1,
+              borderradius: "2px",
             },
           }}
           id="menu-appbar"
@@ -74,7 +78,7 @@ export default function NavBar({ mode, toggleTheme }) {
         >
           <MenuItem
             component="a"
-            href="#intro"
+            href="/"
             onClick={handleClose}
             sx={{
               py: 1.5,

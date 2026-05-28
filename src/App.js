@@ -20,6 +20,7 @@ import Projects from "./Pages/Projects";
 import RelaySMSWebsite from "./Projects/RelaySMS-Website";
 import RelaySMSTelemetry from "./Projects/RelaySMS-Telemetry";
 import RelaySMSDesktop from "./Projects/RelaySMS-Desktop";
+import Shortmesh from "./Projects/Shortmesh";
 import { HelmetProvider } from "react-helmet-async";
 import SEO from "./Components/SEO";
 
@@ -27,7 +28,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [mode, setMode] = useState(() => {
     // Get theme from localStorage or default to 'light'
-    return localStorage.getItem('themeMode') || 'light';
+    return localStorage.getItem('themeMode') || 'dark';
   });
 
   const theme = useMemo(
@@ -43,7 +44,7 @@ function App() {
           },
           background: {
             default: mode === "dark" ? "#161616" : "#ffffff",
-            paper: mode === "dark" ? "#1a1a1a" : "#f5f5f5",
+            paper: mode === "dark" ? "#191919" : "#fafafa",
           },
           text: {
             primary: mode === "dark" ? "#d7d0d7" : "#1a1a1a",
@@ -177,6 +178,21 @@ function App() {
                     />
                     <Layout mode={mode} toggleTheme={toggleTheme}>
                       <RelaySMSDesktop />
+                    </Layout>
+                  </>
+                }
+              />
+              <Route
+                path="projects/shortmesh"
+                element={
+                  <>
+                    <SEO
+                      title="Shortmesh - Project by Vanessa Christopher"
+                      description="Designed and developed the Shortmesh Authy website, Authy widget, and Interface API dashboard experience."
+                      url="/projects/shortmesh"
+                    />
+                    <Layout mode={mode} toggleTheme={toggleTheme}>
+                      <Shortmesh />
                     </Layout>
                   </>
                 }

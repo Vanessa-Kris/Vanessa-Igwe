@@ -4,17 +4,81 @@ import { useThemeColors } from "../hooks/useThemeColors";
 
 function Projects() {
   const colors = useThemeColors();
-  
+
   return (
     <Box sx={{ m: { md: 15, xs: 1 }, pt: 7, color: colors.textSecondary }}>
-      <Typography variant="h3" sx={{ my: { md: 3, xs: 3 }, color: colors.textPrimary }}>
+      <Typography
+        variant="h3"
+        sx={{ mt: { md: 3, xs: 3 }, mb: 6, color: colors.textPrimary }}
+      >
         Featured Projects
         <Divider
           flexItem
-          sx={{ bgcolor: colors.divider, width: { md: "20%", xs: "40%" }, my: 2 }}
+          sx={{
+            bgcolor: colors.divider,
+            width: { md: "20%", xs: "40%" },
+            my: 2,
+          }}
         />
       </Typography>
       <Grid container spacing={4}>
+        <Grid
+          item
+          md={6}
+          xs={12}
+          component="a"
+          href="/projects/relaysms-website"
+        >
+          <Box
+            component="img"
+            src="/1.png"
+            alt=""
+            sx={{ width: "100%", borderRadius: "12px" }}
+          />
+          <Typography variant="h5" sx={{ fontSize: "20px", mt: 2 }}>
+            Product Page Redesign
+          </Typography>
+          <Typography sx={{ color: colors.textPrimary, fontSize: "25px" }}>
+            RelaySMS
+          </Typography>
+        </Grid>
+
+        <Grid
+          item
+          md={6}
+          xs={12}
+          component="a"
+          href="/projects/relaysms-telemetry"
+        >
+          <Box
+            component="img"
+            src="/3.png"
+            alt=""
+            sx={{ width: "100%", borderRadius: "12px" }}
+          />
+          <Typography variant="h5" sx={{ fontSize: "20px", mt: 2 }}>
+            Dashboard
+          </Typography>
+          <Typography sx={{ color: colors.textPrimary, fontSize: "25px" }}>
+            RelaySMS telemetry Dashboard
+          </Typography>
+        </Grid>
+
+        <Grid item md={6} xs={12} component="a" href="/projects/shortmesh">
+          <Box
+            component="img"
+            src="/project-shortmesh.png"
+            alt=""
+            sx={{ width: "100%", borderRadius: "12px" }}
+          />
+          <Typography variant="h5" sx={{ fontSize: "20px", mt: 2 }}>
+            Product
+          </Typography>
+          <Typography sx={{ color: colors.textPrimary, fontSize: "25px" }}>
+            ShortMesh
+          </Typography>
+        </Grid>
+
         <Grid
           item
           md={6}
@@ -46,40 +110,19 @@ function Projects() {
           md={6}
           xs={12}
           component="a"
-          href="/projects/relaysms-telemetry"
+          href="/projects/relaysms-desktop"
         >
           <Box
             component="img"
-            src="/3.png"
+            src="/Untitled design(9).png"
             alt=""
             sx={{ width: "100%", borderRadius: "12px" }}
           />
           <Typography variant="h5" sx={{ fontSize: "20px", mt: 2 }}>
-            Dashboard
+            Desktop App
           </Typography>
           <Typography sx={{ color: colors.textPrimary, fontSize: "25px" }}>
-            RelaySMS telemetry Dashboard
-          </Typography>
-        </Grid>
-
-        <Grid
-          item
-          md={6}
-          xs={12}
-          component="a"
-          href="/projects/relaysms-website"
-        >
-          <Box
-            component="img"
-            src="/1.png"
-            alt=""
-            sx={{ width: "100%", borderRadius: "12px" }}
-          />
-          <Typography variant="h5" sx={{ fontSize: "20px", mt: 2 }}>
-            Product Page Redesign
-          </Typography>
-          <Typography sx={{ color: colors.textPrimary, fontSize: "25px" }}>
-            RelaySMS
+            RelaySMS Desktop
           </Typography>
         </Grid>
 
@@ -103,27 +146,6 @@ function Projects() {
           </Typography>
           <Typography sx={{ color: colors.textPrimary, fontSize: "25px" }}>
             Afkanerd
-          </Typography>
-        </Grid>
-
-        <Grid
-          item
-          md={6}
-          xs={12}
-          component="a"
-          href="/projects/relaysms-desktop"
-        >
-          <Box
-            component="img"
-            src="/Untitled design(9).png"
-            alt=""
-            sx={{ width: "100%", borderRadius: "12px" }}
-          />
-          <Typography variant="h5" sx={{ fontSize: "20px", mt: 2 }}>
-            Desktop App
-          </Typography>
-          <Typography sx={{ color: colors.textPrimary, fontSize: "25px" }}>
-            RelaySMS Desktop
           </Typography>
         </Grid>
 

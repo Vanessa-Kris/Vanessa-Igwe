@@ -30,11 +30,9 @@ export default function Intro() {
       </Typography>
 
       <Typography>
-        Creative software developer and designer building visually stunning and
-        functional digital experiences. I’m passionate about clean UI, elegant
-        product design, and seamless user experiences. Outside tech, I’m
-        building a fashion brand, obsessed with loc culture, and deeply inspired
-        by music, food, and art.
+        Creative software developer and designer building beautiful and
+        functional user interfaces. Outside tech, I’m building a fashion brand,
+        obsessed with loc culture.
       </Typography>
       <Box
         sx={{ mt: 7, width: { md: "70%", xs: "95%" } }}

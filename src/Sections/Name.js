@@ -53,11 +53,11 @@ export default function Name() {
                 left: "50%",
               }}
               alt="A picture of Vanessa"
-              src="zz.jpeg"
+              src="new2.png"
             />
           )}
           <Typography textAlign="center" variant="h6" sx={{ m: 2 }}>
-            MEET ME!  
+            MEET ME!
           </Typography>
           <Grid
             container

@@ -15,7 +15,7 @@ const Loader = () => {
         zIndex: 999, // Ensure it's above other content
       }}
     >
-      <CircularProgress size={60} thickness={4} />
+      <CircularProgress size={50} thickness={2} />
     </Box>
   );
 };
