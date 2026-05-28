@@ -2,15 +2,12 @@ import {
   Box,
   Typography,
   Divider,
-  Grid,
-  TextField,
-  Button,
+  Stack,
 } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
-  faXTwitter,
-  faFacebook,
+  faWhatsapp,
   faInstagram,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
@@ -48,77 +45,13 @@ export default function Contact() {
       </Typography>
 
       <Typography sx={{ pb: 3 }}>
-        If you have any suggestion, project, or even want to say “hello,” please
-        fill out the form below, and I will reply to you shortly.
+        If you have a project, collaboration, or just want to say hello, reach
+        out through any of my socials below.
       </Typography>
-
-      <Grid
-        component="form"
-        action="https://formspree.io/f/mpzgognj"
-        method="POST"
-        container
-        columnSpacing={2}
-      >
-        <Grid item md={6} xs={12} sx={{ py: 2 }}>
-          Name* <br />
-          <TextField
-            fullWidth
-            name="name"
-            id="outlined-basic"
-            sx={{ border: "1px solid #673147", borderRadius: "5px" }}
-          />
-        </Grid>
-        <Grid item md={6} xs={12} sx={{ py: 2 }}>
-          Email* <br />
-          <TextField
-            fullWidth
-            name="email"
-            id="outlined-basic"
-            variant="outlined"
-            sx={{ border: "1px solid #673147", borderRadius: "5px" }}
-          />
-        </Grid>
-        <Grid item md={12} xs={12} sx={{ py: 2 }}>
-          Phone Number <br />
-          <TextField
-            fullWidth
-            name="number"
-            id="outlined-basic"
-            variant="outlined"
-            sx={{ border: "1px solid #673147", borderRadius: "5px" }}
-          />
-        </Grid>
-        <Grid item md={12} xs={12} sx={{ py: 2 }}>
-          Message* <br />
-          <TextField
-            fullWidth
-            name="message"
-            multiline
-            rows={4}
-            id="outlined-basic"
-            variant="outlined"
-            className="input"
-            sx={{
-              border: "1px solid #673147",
-              borderRadius: "5px",
-            }}
-          />
-        </Grid>
-
-        <Grid item md={12} xs={12} sx={{ py: 2 }}>
-          <Button
-            type="submit"
-            variant="contained"
-            sx={{ width: "100%", p: 2, fontWeight: 900 }}
-          >
-            Send Message
-          </Button>
-        </Grid>
-      </Grid>
 
       <Box sx={{ py: 5 }}>
         <Typography variant="h5" sx={{ fontSize: { md: "17px" } }}>
-          Adress
+          Address
         </Typography>
 
         <Typography
@@ -146,64 +79,24 @@ export default function Contact() {
           Vanessaigwe1@gmail.com
         </Typography>
 
-        <Box
-          component="a"
-          href="https://github.com/Vanessa-Kris"
-          target="_blank"
-        >
-          <FontAwesomeIcon
-            style={{ fontSize: "30px", marginRight: 30 }}
-            icon={faGithub}
-            color="#673147"
-          />
-        </Box>
-        <Box
-          component="a"
-          href="https://www.linkedin.com/in/vanessachristopherigwe"
-          target="_blank"
-        >
-          <FontAwesomeIcon
-            style={{ fontSize: "30px", marginRight: 30 }}
-            icon={faLinkedin}
-            color="#673147"
-          />
-        </Box>
+        <Typography variant="h5" sx={{ fontSize: { md: "17px" }, mb: 2 }}>
+          Socials
+        </Typography>
 
-        <Box
-          component="a"
-          href="https://twitter.com/Mini_on_Nessa"
-          target="_blank"
-        >
-          <FontAwesomeIcon
-            style={{ fontSize: "30px", marginRight: 30 }}
-            icon={faXTwitter}
-            color="#673147"
-          />
-        </Box>
-
-        <Box
-          component="a"
-          href="https://facebook.com/vanesssachrsitopherigwe/"
-          target="_blank"
-        >
-          <FontAwesomeIcon
-            style={{ fontSize: "30px", marginRight: 30 }}
-            icon={faFacebook}
-            color="#673147"
-          />
-        </Box>
-
-        <Box
-          component="a"
-          href="https://www.instagram.com/vanessachristopherigwe/"
-          target="_blank"
-        >
-          <FontAwesomeIcon
-            style={{ fontSize: "30px", marginRight: 30 }}
-            icon={faInstagram}
-            color="#673147"
-          />
-        </Box>
+        <Stack direction="row" spacing={3} sx={{ flexWrap: "wrap", rowGap: 2 }}>
+          <Box component="a" href="https://github.com/Vanessa-Kris" target="_blank">
+            <FontAwesomeIcon style={{ fontSize: "30px" }} icon={faGithub} color="#673147" />
+          </Box>
+          <Box component="a" href="https://www.linkedin.com/in/vanessachristopherigwe" target="_blank">
+            <FontAwesomeIcon style={{ fontSize: "30px" }} icon={faLinkedin} color="#673147" />
+          </Box>
+          <Box component="a" href="https://wa.me/237670338998" target="_blank">
+            <FontAwesomeIcon style={{ fontSize: "30px" }} icon={faWhatsapp} color="#673147" />
+          </Box>
+          <Box component="a" href="https://www.instagram.com/vanessachristopherigwe/" target="_blank">
+            <FontAwesomeIcon style={{ fontSize: "30px" }} icon={faInstagram} color="#673147" />
+          </Box>
+        </Stack>
       </Box>
     </Box>
   );

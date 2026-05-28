@@ -91,23 +91,18 @@ export default function Portfolio() {
 
       <ul ref={ref} className="list">
         <li className="listitems" style={{ flex: "0 0 550px" }}>
-          <Box
-            component="a"
-            href="https://stunnersgalleria.com"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
+          <Box component="a" href="/projects/relaysms-website">
             <Box
               component="img"
-              src="/first try.png"
+              src="/1.png"
               alt=""
               sx={{ width: "100%", borderRadius: "12px" }}
             />
-            <Typography variant="h5" sx={{ fontSize: "20px" }}>
-              E-commerce website
+            <Typography variant="h5" sx={{ fontSize: "20px", mt: 2 }}>
+              Landing Page
             </Typography>
             <Typography sx={{ color: colors.textPrimary, fontSize: "25px" }}>
-              Stunners Galleria
+              RelaySMS
             </Typography>
           </Box>
         </li>
@@ -120,7 +115,7 @@ export default function Portfolio() {
               alt=""
               sx={{ width: "100%", borderRadius: "12px" }}
             />
-            <Typography variant="h5" sx={{ fontSize: "20px" }}>
+            <Typography variant="h5" sx={{ fontSize: "20px", mt: 2 }}>
               Dashboard
             </Typography>
             <Typography sx={{ color: colors.textPrimary, fontSize: "25px" }}>
@@ -130,23 +125,45 @@ export default function Portfolio() {
         </li>
 
         <li className="listitems" style={{ flex: "0 0 550px" }}>
-          <Box component="a" href="/projects/relaysms-website">
+          <Box component="a" href="/projects/shortmesh">
             <Box
               component="img"
-              src="/1.png"
+              src="/project-shortmesh.png"
               alt=""
               sx={{ width: "100%", borderRadius: "12px" }}
             />
-            <Typography variant="h5" sx={{ fontSize: "20px" }}>
-              Landing Page
+            <Typography variant="h5" sx={{ fontSize: "20px", mt: 2 }}>
+              Product
             </Typography>
             <Typography sx={{ color: colors.textPrimary, fontSize: "25px" }}>
-              RelaySMS
+              ShortMesh
             </Typography>
           </Box>
         </li>
 
-        <li className="listitems" style={{ flex: "0 0 300px" }}>
+        <li className="listitems" style={{ flex: "0 0 550px" }}>
+          <Box
+            component="a"
+            href="https://stunnersgalleria.com"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <Box
+              component="img"
+              src="/first try.png"
+              alt=""
+              sx={{ width: "100%", borderRadius: "12px" }}
+            />
+            <Typography variant="h5" sx={{ fontSize: "20px", mt: 2 }}>
+              E-commerce website
+            </Typography>
+            <Typography sx={{ color: colors.textPrimary, fontSize: "25px" }}>
+              Stunners Galleria
+            </Typography>
+          </Box>
+        </li>
+
+        {/* <li className="listitems" style={{ flex: "0 0 300px" }}>
           <Box component="a" href="https://blog.stunnersgalleria.com/">
             <Box
               component="img"
@@ -161,24 +178,7 @@ export default function Portfolio() {
               Stunners Galleria Blog
             </Typography>
           </Box>
-        </li>
-
-        <li className="listitems" style={{ flex: "0 0 550px" }}>
-          <Box component="a" href="/projects/relaysms-desktop">
-            <Box
-              component="img"
-              src="/Untitled design(9).png"
-              alt=""
-              sx={{ width: "100%", borderRadius: "12px" }}
-            />
-            <Typography variant="h5" sx={{ fontSize: "20px" }}>
-              Desktop App
-            </Typography>
-            <Typography sx={{ color: colors.textPrimary, fontSize: "25px" }}>
-              RelaySMS Desktop
-            </Typography>
-          </Box>
-        </li>
+        </li> */}
 
         {/* <li className="listitems">
           <img src="/Stunners Blog.png" alt="" />

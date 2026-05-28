@@ -2,32 +2,30 @@ import React, { Fragment, useEffect, useState } from "react";
 // import { motion } from "framer-motion";
 import { Box, Grid } from "@mui/material";
 import Divider from "@mui/material/Divider";
-import MouseMotionCircle from "./Components/Motion";
+// import MouseMotionCircle from "./Components/Motion";
 import NavBar from "./Components/NavBar";
 import Name from "./Sections/Name";
-import ThemeToggle from "./Components/ThemeToggle";
 import { useThemeColors } from "./hooks/useThemeColors";
 
 export default function Layout(props) {
   const colors = useThemeColors();
   const [scrollPosition, setScrollPosition] = useState(0);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const isScrolled = scrollPosition > 100;
+
+  const smoothShiftTransition = {
+    transition: "flex-basis 0.95s cubic-bezier(0.22, 0.61, 0.36, 1), max-width 0.95s cubic-bezier(0.22, 0.61, 0.36, 1), width 0.95s cubic-bezier(0.22, 0.61, 0.36, 1)",
+    willChange: "flex-basis, max-width, width",
+  };
 
   useEffect(() => {
     const handleScroll = () => {
       setScrollPosition(window.scrollY);
     };
 
-    const handleMouseMove = (e) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
-
     window.addEventListener("scroll", handleScroll);
-    window.addEventListener("mousemove", handleMouseMove);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
 
@@ -35,16 +33,22 @@ export default function Layout(props) {
   if (props.children) {
     return (
       <Fragment>
-        {/* Theme toggle for project pages - fixed position */}
+        {/* NavBar fixed on desktop for project pages */}
         <Box
           sx={{
+            display: { md: "block", xs: "none" },
             position: "fixed",
-            top: { md: 40, xs: 20 },
-            right: { md: 90, xs: 70 },
+            top: 0,
+            right: 0,
+            pr: 4,
             zIndex: 1000,
           }}
         >
-          <ThemeToggle mode={props.mode} onToggle={props.toggleTheme} />
+          <NavBar mode={props.mode} toggleTheme={props.toggleTheme} />
+        </Box>
+        {/* NavBar at top on mobile for project pages */}
+        <Box sx={{ display: { md: "none", xs: "block" } }}>
+          <NavBar mode={props.mode} toggleTheme={props.toggleTheme} />
         </Box>
         <Box sx={{ display: { md: "block", xs: "none" } }}>
           {props.children}
@@ -53,7 +57,7 @@ export default function Layout(props) {
           {props.children}
         </Box>
         <Box sx={{ display: { md: "block", xs: "none" } }}>
-          <MouseMotionCircle x={mousePosition.x} y={mousePosition.y} />
+          {/* <MouseMotionCircle x={mousePosition.x} y={mousePosition.y} /> */}
         </Box>
       </Fragment>
     );
@@ -66,11 +70,11 @@ export default function Layout(props) {
           id="layout"
           container
           columnSpacing={2}
-          className={scrollPosition > 100 ? "transition-delay" : ""}
+          className={isScrolled ? "transition-delay" : ""}
         >
-          <Grid item md={scrollPosition > 100 ? 8 : 7} xs={12}>
+          <Grid item md={isScrolled ? 8 : 7} xs={12} sx={smoothShiftTransition}>
             <Box id="intro">{props.intro}</Box>
-            <Box id="about">{props.about}</Box>
+            {/* <Box id="about">{props.about}</Box> */}
             <Box id="portfolio">{props.portfolio}</Box>
             <Box id="experience">{props.experience}</Box>
             {/* <Box id="reviews">{props.reviews}</Box> */}
@@ -81,7 +85,10 @@ export default function Layout(props) {
           <Divider
             flexItem
             orientation="vertical"
-            sx={{ bgcolor: colors.accent, transition: "all 0.3s ease 0.5s" }}
+            sx={{
+              bgcolor: colors.accent,
+              transition: "all 0.95s cubic-bezier(0.22, 0.61, 0.36, 1)",
+            }}
           />
           <Box
             sx={{
@@ -94,7 +101,12 @@ export default function Layout(props) {
             <NavBar mode={props.mode} toggleTheme={props.toggleTheme} />
           </Box>
 
-          <Grid item md={scrollPosition > 100 ? 3 : 4} className="sticky-grid">
+          <Grid
+            item
+            md={isScrolled ? 3 : 4}
+            className="sticky-grid"
+            sx={smoothShiftTransition}
+          >
             <Name />
           </Grid>
         </Grid>
@@ -103,16 +115,16 @@ export default function Layout(props) {
         {props.nav}
         {props.name}
         <Box id="intro">{props.intro}</Box>
-        <Box id="about">{props.about}</Box>
-        <Box id="experience">{props.experience}</Box>
+        {/* <Box id="about">{props.about}</Box> */}
         <Box id="portfolio">{props.portfolio}</Box>
+        <Box id="experience">{props.experience}</Box>
         {/* <Box id="reviews">{props.reviews}</Box>
         <Box id="blogs">{props.blogs}</Box> */}
         <Box id="contact">{props.contact}</Box>
         {props.footer}
       </Box>
       <Box sx={{ display: { md: "block", xs: "none" } }}>
-        <MouseMotionCircle x={mousePosition.x} y={mousePosition.y} />
+        {/* <MouseMotionCircle x={mousePosition.x} y={mousePosition.y} /> */}
       </Box>
     </Fragment>
   );

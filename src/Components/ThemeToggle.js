@@ -20,9 +20,9 @@ export default function ThemeToggle({ mode, onToggle }) {
         aria-label="toggle theme"
       >
         {mode === "dark" ? (
-          <BulbOutlined style={{ fontSize: "28px" }} />
+          <BulbOutlined style={{ fontSize: "25px" }} />
         ) : (
-          <BulbFilled style={{ fontSize: "28px" }} />
+          <BulbFilled style={{ fontSize: "25px" }} />
         )}
       </IconButton>
     </Tooltip>

@@ -58,7 +58,10 @@ export default function Experience() {
           aria-label="basic tabs example"
         >
           <Tab
-            sx={{ color: colors.textSecondary, fontSize: { md: "20px", xs: "15px" } }}
+            sx={{
+              color: colors.textSecondary,
+              fontSize: { md: "20px", xs: "15px" },
+            }}
             label="Experience"
             {...a11yProps(0)}
           />
@@ -79,16 +82,38 @@ export default function Experience() {
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>
+        {/* <Box
+          sx={{
+            "& .MuiCard-root": {
+              bgcolor: colors.bgSecondary,
+              color: colors.textSecondary,
+              border: `0.2px solid ${colors.divider}`,
+              boxShadow: "none",
+              backgroundImage: "none",
+            },
+          }}
+        > */}
         <Card
-          sx={{ p: { md: 2, xs: 1 }, my: { md: 3, xs: 3 }, color: colors.textSecondary }}
+          elevation={0}
+          sx={{
+            p: { md: 2, xs: 1 },
+            my: { md: 3, xs: 3 },
+            border: `0.2px solid ${colors.borderSecondary}`,
+          }}
         >
-          <Typography sx={{ px: { md: 2, xs: 1 }, color: colors.textPrimary }} variant="h5">
+          <Typography
+            sx={{ px: { md: 2, xs: 1 }, color: colors.textPrimary }}
+            variant="h5"
+          >
             Outreachy{" "}
             <span style={{ fontSize: "15px", color: colors.textSecondary }}>
               ( Dec 2021 - Mar 2022 )
             </span>
           </Typography>
-          <Typography sx={{ px: 2, pt: 2, color: colors.textPrimary }} variant="h4">
+          <Typography
+            sx={{ px: 2, pt: 2, color: colors.textPrimary }}
+            variant="h4"
+          >
             Fedora (Package Manager)
           </Typography>
           <CardContent sx={{ fontSize: "18px" }}>
@@ -129,7 +154,12 @@ export default function Experience() {
         </Card>
         {/*  */}
         <Card
-          sx={{ p: { md: 2, xs: 1 }, my: { md: 3, xs: 3 }, color: colors.textSecondary }}
+          elevation={0}
+          sx={{
+            p: { md: 2, xs: 1 },
+            my: { md: 3, xs: 3 },
+            border: `0.2px solid ${colors.borderSecondary}`,
+          }}
         >
           <Typography sx={{ px: 2, color: colors.textPrimary }} variant="h5">
             Stunners Galleria{" "}
@@ -137,7 +167,10 @@ export default function Experience() {
               ( Jan 2023 - Today )
             </span>
           </Typography>
-          <Typography sx={{ px: 2, pt: 2, color: colors.textPrimary }} variant="h4">
+          <Typography
+            sx={{ px: 2, pt: 2, color: colors.textPrimary }}
+            variant="h4"
+          >
             Freelance Front-end Engineer
           </Typography>
           <CardContent sx={{ fontSize: "18px" }}>
@@ -165,7 +198,12 @@ export default function Experience() {
         {/*  */}
         {/*  */}
         <Card
-          sx={{ p: { md: 2, xs: 1 }, my: { md: 3, xs: 3 }, color: colors.textSecondary }}
+          elevation={0}
+          sx={{
+            p: { md: 2, xs: 1 },
+            my: { md: 3, xs: 3 },
+            border: `0.2px solid ${colors.borderSecondary}`,
+          }}
         >
           <Typography sx={{ px: 2, color: colors.textPrimary }} variant="h5">
             Afkanerd{" "}
@@ -173,7 +211,10 @@ export default function Experience() {
               ( Apr 2022 - Apr 2023 )
             </span>
           </Typography>
-          <Typography sx={{ px: 2, pt: 2, color: colors.textPrimary }} variant="h4">
+          <Typography
+            sx={{ px: 2, pt: 2, color: colors.textPrimary }}
+            variant="h4"
+          >
             Jr. Front-end Engineer
           </Typography>
           <CardContent sx={{ fontSize: "18px" }}>
@@ -208,7 +249,12 @@ export default function Experience() {
           </CardContent>
         </Card>
         <Card
-          sx={{ p: { md: 2, xs: 1 }, my: { md: 3, xs: 3 }, color: colors.textSecondary }}
+          elevation={0}
+          sx={{
+            p: { md: 2, xs: 1 },
+            my: { md: 3, xs: 3 },
+            border: `0.2px solid ${colors.borderSecondary}`,
+          }}
         >
           <Typography sx={{ px: 2, color: colors.textPrimary }} variant="h5">
             Afkanerd
@@ -216,7 +262,10 @@ export default function Experience() {
               ( March 2024 - March 2025 )
             </span>
           </Typography>
-          <Typography sx={{ px: 2, pt: 2, color: colors.textPrimary }} variant="h4">
+          <Typography
+            sx={{ px: 2, pt: 2, color: colors.textPrimary }}
+            variant="h4"
+          >
             Desktop App Developer
           </Typography>
           <CardContent sx={{ fontSize: "18px" }}>
@@ -242,7 +291,12 @@ export default function Experience() {
         </Card>
         {/*  */}
         <Card
-          sx={{ p: { md: 2, xs: 1 }, my: { md: 3, xs: 3 }, color: colors.textSecondary }}
+          elevation={0}
+          sx={{
+            p: { md: 2, xs: 1 },
+            my: { md: 3, xs: 3 },
+            border: `0.2px solid ${colors.borderSecondary}`,
+          }}
         >
           <Typography sx={{ px: 2, color: colors.textPrimary }} variant="h5">
             Afkanerd
@@ -250,7 +304,10 @@ export default function Experience() {
               ( March 2025 - Today )
             </span>
           </Typography>
-          <Typography sx={{ px: 2, pt: 2, color: colors.textPrimary }} variant="h4">
+          <Typography
+            sx={{ px: 2, pt: 2, color: colors.textPrimary }}
+            variant="h4"
+          >
             Front-end Engineer
           </Typography>
           <CardContent sx={{ fontSize: "18px" }}>
@@ -271,10 +328,13 @@ export default function Experience() {
             consistency
             <br /> * Conducted user research and usability testing to inform
             design decisions
-            <br /> * Worked on NostaBridge product page and dashboard, also created branding assets
-            <br /> * Worked on QueueDroid page and dashboard, also created branding assets
+            <br /> * Worked on NostaBridge product page and dashboard, also
+            created branding assets
+            <br /> * Worked on QueueDroid page and dashboard, also created
+            branding assets
           </CardContent>
         </Card>
+        {/* </Box> */}
       </CustomTabPanel>
       {/* <CustomTabPanel value={value} index={1}>
         <Card sx={{ p: 2, my: 2, bgcolor: colors.bgSecondary, color: colors.textSecondary }}>

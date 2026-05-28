@@ -33,5 +33,11 @@ export const useThemeColors = () => {
     // Helper
     isDark,
     isLight: !isDark,
+
+    // MUI palette passthrough for components that use theme background tokens
+    background: {
+      default: theme.palette.background.default,
+      paper: theme.palette.background.paper,
+    },
   };
 };
